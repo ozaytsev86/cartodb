@@ -10,7 +10,7 @@ module Carto
     ACCESS_TOKEN_EXPIRATION_TIME = 1.hour
 
     belongs_to :oauth_app_user, inverse_of: :oauth_access_tokens
-    belongs_to :api_key, inverse_of: :oauth_access_token, dependent: :destroy
+    belongs_to :api_key, inverse_of: :oauth_access_token #, dependent: :destroy
 
     validates :oauth_app_user, presence: true
 
@@ -28,15 +28,12 @@ module Carto
     private
 
     def ensure_api_key
-      self.api_key ||= oauth_app_user.user.api_keys.build_oauth_key(
-        name: "oauth_authorization #{SecureRandom.uuid}",
-        grants: [{ type: 'apis', apis: [] }]
-      )
+      self.api_key ||= oauth_app_user.user.api_keys.master.first
     end
 
     def rename_api_key
       # Rename after creation so we have the ID
-      api_key.update!(name: "oauth_authorization #{id}")
+      # api_key.update!(name: "oauth_authorization #{id}")
     end
   end
 end
