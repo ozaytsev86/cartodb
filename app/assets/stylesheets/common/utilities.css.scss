@@ -6,6 +6,10 @@
   opacity: 0;
 }
 
+.u-bg-grey {
+  background-color: $cStructure-grayBkg;
+}
+
 // Center the content within the defined layout width
 .u-inner {
   margin: 0 auto;

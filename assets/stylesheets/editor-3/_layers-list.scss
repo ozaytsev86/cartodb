@@ -193,6 +193,8 @@
 .Editor-ListLayer-title {
   display: flex;
   align-items: center;
+  margin-top: $halfBaseSize;
+  margin-bottom: $halfBaseSize;
 }
 
 .Editor-ListLayer-titleText {
@@ -236,7 +238,6 @@
   position: relative;
   align-items: center;
   margin-bottom: 8px;
-  background: #FFF;
 
   &:last-child {
     margin-bottom: 0;
@@ -256,7 +257,7 @@
   }
 
   .Editor-ListAnalysis-innerItem {
-    max-width: calc(50% - 8px);
+    max-width: 50%;
   }
 }
 
@@ -275,8 +276,7 @@
 
 .Editor-ListAnalysis-inner {
   display: flex;
-  width: calc(100% + 12px);
-  margin: 0 -4px;
+  width: 100%;
 
   .Editor-ListAnalysis-item {
     flex: 1;
@@ -285,19 +285,25 @@
 }
 
 .Editor-ListAnalysis-innerItem {
-  display: flex;
   flex: 1;
   align-items: center;
-  margin: 0 $halfBaseSize;
   background: $cWhite;
+}
+
+.Editor-ListAnalysis-innerItem--primary {
+  box-sizing: border-box;
+  padding-right: $halfBaseSize;
+}
+
+.Editor-ListAnalysis-innerItem--secondary {
+  box-sizing: border-box;
+  padding-left: $halfBaseSize;
 }
 
 .Editor-ListAnalysis-layer {
   @include regularBorder();
-  padding-right: $baseSize;
   transition: border 0.2s ease-in;
   border-radius: $halfBaseSize;
-  background: $cThirdBackground;
 
   &:hover {
     border: 1px solid $cBlueHover;
@@ -326,9 +332,6 @@
   width: 40px;
   min-width: 40px;
   height: 32px;
-  margin-top: -1px;
-  margin-bottom: -1px;
-  margin-left: -1px;
   border-top-left-radius: $halfBaseSize;
   border-bottom-left-radius: $halfBaseSize;
 }
@@ -337,7 +340,6 @@
   display: flex;
   align-items: center;
   height: 32px;
-  padding: 0 8px;
 }
 
 .Editor-ListAnalysis-itemInfoDataset {
@@ -366,7 +368,6 @@
 
 .Editor-ListAnalysis-title {
   width: 100%;
-  padding-right: 12px;
 }
 
 .Editor-ListAnalysis-error {

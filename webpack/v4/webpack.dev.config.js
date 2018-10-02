@@ -9,5 +9,8 @@ module.exports = merge(configBase, {
       __IN_DEV__: JSON.stringify(true),
       __ENV__: JSON.stringify('dev')
     })
-  ]
+  ],
+  watchOptions: {
+    poll: true
+  }
 });

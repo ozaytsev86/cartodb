@@ -1,7 +1,9 @@
 <p class="Editor-ListAnalysis-itemInfoTitle CDB-Text CDB-Size-small u-ellipsis u-flex" title="<%- tableName %>">
+<% if (id) { %>
   <span class="CDB-Text is-semibold CDB-Size-small u-rSpace u-upperCase"  style="color: <%- bgColor %>">
     <%- id %>
   </span>
+<% } %>
   Source
   <span class="Editor-ListAnalysis-title u-altTextColor u-lSpace u-ellipsis">
     <%- tableName %>
