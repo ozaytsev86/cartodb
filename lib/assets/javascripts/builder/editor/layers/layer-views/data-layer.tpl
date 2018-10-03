@@ -79,7 +79,7 @@
         </li>
       </ul>
     </div>
-      <div class="u-flex Editor-ListLayer-info js-analyses-widgets-info">
+      <div class="Editor-ListLayer-info js-analyses-widgets-info u-flex u-tSpace">
         <span class="CDB-Text CDB-Size-small u-secondaryTextColor u-upperCase u-rSpace--m">
           <%- _t('editor.layers.layer.analyses-count', { smart_count: numberOfAnalyses }) %>
         </span>

@@ -12,7 +12,6 @@
     </div>
   <% } %>
 </div>
-<p class="Editor-ListAnalysis-title CDB-Text CDB-Size-small u-secondaryTextColor u-ellipsis" title="<%- title %>"><%- title %></p>
 <p class="Editor-ListAnalysis-title CDB-Text CDB-Size-small u-secondaryTextColor u-ellipsis u-rSpace--m" title="<%- title %>"><%- title %></p>
 
 <% if (hasError) { %>
